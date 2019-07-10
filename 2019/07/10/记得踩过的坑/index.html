@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 永远无知</title>
+  <title>记得踩过的坑 | 永远无知</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="永远无知">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="Java基础1.concat  链接字符串  String s=”123”;  s2=s.concat(“456”)  s2=1234562.DecimalFormat   fnum1  =   new  DecimalFormat(“##0.00”);  格式化BigDecimal的格式3.show parameter sort_area_size   查看排序内存大小4.oracle里默认将参">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记得踩过的坑">
+<meta property="og:url" content="http://yoursite.com/2019/07/10/记得踩过的坑/index.html">
 <meta property="og:site_name" content="永远无知">
+<meta property="og:description" content="Java基础1.concat  链接字符串  String s=”123”;  s2=s.concat(“456”)  s2=1234562.DecimalFormat   fnum1  =   new  DecimalFormat(“##0.00”);  格式化BigDecimal的格式3.show parameter sort_area_size   查看排序内存大小4.oracle里默认将参">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-10T12:23:12.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="永远无知">
+<meta name="twitter:title" content="记得踩过的坑">
+<meta name="twitter:description" content="Java基础1.concat  链接字符串  String s=”123”;  s2=s.concat(“456”)  s2=1234562.DecimalFormat   fnum1  =   new  DecimalFormat(“##0.00”);  格式化BigDecimal的格式3.show parameter sort_area_size   查看排序内存大小4.oracle里默认将参">
   
     <link rel="alternative" href="/atom.xml" title="永远无知" type="application/atom+xml">
   
@@ -150,130 +154,173 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-记得踩过的坑" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      记得踩过的坑
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/10/记得踩过的坑/" class="archive-article-date">
+
+        
+        <a href="/2019/07/10/记得踩过的坑/" class="archive-article-date">
   	<time datetime="2019-07-10T11:46:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/10/记得踩过的坑/">记得踩过的坑</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><p>1.concat  链接字符串  String s=”123”;  s2=s.concat(“456”)  s2=123456<br>2.DecimalFormat   fnum1  =   new  DecimalFormat(“##0.00”);  格式化BigDecimal的格式<br>3.show parameter sort_area_size   查看排序内存大小<br>4.oracle里默认将参数workarea_size_policy=auto，此时sort_area_size是不起作用的,可以<br>alter system set workarea_size_policy=MANUAL scope=spfile</p>
+<h2 id="框架相关"><a href="#框架相关" class="headerlink" title="框架相关"></a>框架相关</h2><p>1。clone后的maven项目需要install 完成jar包的更新</p>
+<ol start="2">
+<li>@ResponseBody 不写会引起报500</li>
+<li>报400多是springmvc参数配置有问题</li>
+<li>事务在service层   @Transactional(rollbackFor = Exception.class)</li>
+<li>需要手动调用maven的时候，需要在最外面（web层）先添加dependency，之后再向内部传递调用</li>
+<li>mybatis 对于＞和＜处理 可以用＜！[CDATA[ ]]＞处理</li>
+<li><setting name="logImpl" value="STDOUT_LOGGING">   打印sql<h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2></setting></li>
+<li>SqlServer的Reporting Service会以System的名称占用8080端口 需要在internet information Services (IIS)中停止配置编辑器【用Win+q 搜IIS 找到IIS Manager即可】</li>
+<li>idea中的本地历史文件可以回复被git弄丢的文件 </li>
+<li>BeanCreateException  可以@Autowired(required=false)</li>
+<li>quartz 执行时机高于springcontext  在getbean时需要提前判断是否为空</li>
+<li>每一个调用的dao层方法 看一下数据库有哪些必传参数 避免执行成功数据不更改<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2></li>
+<li>如何让json按照put的先后顺序存入数据   new JSONObject(true)</li>
+<li>gson   可以将json与map,list,bean对象互相转换   </li>
+<li>数据计算用Bigdecimal 传值用String</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/10/记得踩过的坑/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/10/sql问题汇总/" class="archive-article-date">
-  	<time datetime="2019-07-10T11:45:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/10/sql问题汇总/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sql问题汇总</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/10/sql问题汇总/">sql问题汇总</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/10/特别感谢/" class="archive-article-date">
-  	<time datetime="2019-07-10T11:37:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/10/特别感谢/">特别感谢</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/10/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-10T11:13:23.441Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/10/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -296,8 +343,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

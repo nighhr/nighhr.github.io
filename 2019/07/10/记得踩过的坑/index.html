@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="永远无知">
 <meta property="og:description" content="Java基础1.concat  链接字符串  String s=”123”;  s2=s.concat(“456”)  s2=1234562.DecimalFormat   fnum1  =   new  DecimalFormat(“##0.00”);  格式化BigDecimal的格式3.show parameter sort_area_size   查看排序内存大小4.oracle里默认将参">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-10T12:32:11.104Z">
+<meta property="og:updated_time" content="2019-07-10T12:41:24.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记得踩过的坑">
 <meta name="twitter:description" content="Java基础1.concat  链接字符串  String s=”123”;  s2=s.concat(“456”)  s2=1234562.DecimalFormat   fnum1  =   new  DecimalFormat(“##0.00”);  格式化BigDecimal的格式3.show parameter sort_area_size   查看排序内存大小4.oracle里默认将参">
@@ -175,23 +175,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><p>1.concat  链接字符串  String s=”123”;  s2=s.concat(“456”)  s2=123456<br>2.DecimalFormat   fnum1  =   new  DecimalFormat(“##0.00”);  格式化BigDecimal的格式<br>3.show parameter sort_area_size   查看排序内存大小<br>4.oracle里默认将参数workarea_size_policy=auto，此时sort_area_size是不起作用的,可以<br>alter system set workarea_size_policy=MANUAL scope=spfile</p>
-<h2 id="框架相关"><a href="#框架相关" class="headerlink" title="框架相关"></a>框架相关</h2><p>1.clone后的maven项目需要install 完成jar包的更新</p>
-<ol start="2">
-<li>@ResponseBody 不写会引起报500</li>
-<li>报400多是springmvc参数配置有问题</li>
-<li>事务在service层   @Transactional(rollbackFor = Exception.class)</li>
-<li>需要手动调用maven的时候，需要在最外面（web层）先添加dependency，之后再向内部传递调用</li>
-<li>mybatis 对于＞和＜处理 可以用＜！[CDATA[ ]]＞处理</li>
-<li>setting name=”logImpl” value=”STDOUT_LOGGING”    打印sql<h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2></li>
-<li>SqlServer的Reporting Service会以System的名称占用8080端口 需要在internet information Services (IIS)中停止配置编辑器【用Win+q 搜IIS 找到IIS Manager即可】</li>
-<li>idea中的本地历史文件可以回复被git弄丢的文件 </li>
-<li>BeanCreateException  可以@Autowired(required=false)</li>
-<li>quartz 执行时机高于springcontext  在getbean时需要提前判断是否为空</li>
-<li>每一个调用的dao层方法 看一下数据库有哪些必传参数 避免执行成功数据不更改<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2></li>
-<li>让json按照put的先后顺序存入数据 可以new JSONObject(true)</li>
-<li>gson   可以将json与map,list,bean对象互相转换   </li>
-<li>数据计算用Bigdecimal 传值用String</li>
-</ol>
+<h2 id="框架相关"><a href="#框架相关" class="headerlink" title="框架相关"></a>框架相关</h2><p>1.clone后的maven项目需要install 完成jar包的更新<br>2.@ResponseBody 不写会引起报500<br>3.报400多是springmvc参数配置有问题<br>4.事务在service层   @Transactional(rollbackFor = Exception.class)<br>5.需要手动调用maven的时候，需要在最外面（web层）先添加dependency，之后再向内部传递调用<br>6.mybatis 对于＞和＜处理 可以用＜！[CDATA[ ]]＞处理<br>7.setting name=”logImpl” value=”STDOUT_LOGGING”    打印sql</p>
+<h2 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h2><p>1.SqlServer的Reporting Service会以System的名称占用8080端口 需要在internet information Services (IIS)中停止配置编辑器【用Win+q 搜IIS 找到IIS Manager即可】<br>2.idea中的本地历史文件可以回复被git弄丢的文件<br>3.BeanCreateException  可以@Autowired(required=false)<br>4.quartz 执行时机高于springcontext  在getbean时需要提前判断是否为空<br>5.每一个调用的dao层方法 看一下数据库有哪些必传参数 避免执行成功数据不更改</p>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><p>1.让json按照put的先后顺序存入数据 可以new JSONObject(true)<br>2.gson   可以将json与map,list,bean对象互相转换<br>3.数据计算用Bigdecimal 传值用String</p>
 
       
 

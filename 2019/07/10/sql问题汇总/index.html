@@ -47,11 +47,13 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/cca.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Nighhr</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">幽幽孤影伴寒星</p>
 		
 
 		<nav class="header-menu">
@@ -59,14 +61,14 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/">随笔</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">搜索</a>
     			
             
     			
@@ -81,14 +83,6 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-		        
 			</div>
 		</nav>
 	</header>		
@@ -105,11 +99,13 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/cca.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Nighhr</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>幽幽孤影伴寒星<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -122,14 +118,6 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-			        
 				</div>
 			</nav>
 
@@ -139,7 +127,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -156,6 +144,8 @@
           <div id="js-content" class="content-ll">
             <article id="post-sql问题汇总" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+  
+  
     
       <header class="article-header">
         
@@ -383,6 +373,19 @@ DEPT_TYPE NULL </code></pre>
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#sql顺序"><span class="toc-number">1.</span> <span class="toc-text">sql顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择最有效率的表名顺序-只在基于规则的优化器中有效-："><span class="toc-number">2.</span> <span class="toc-text">选择最有效率的表名顺序(只在基于规则的优化器中有效)：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#WHERE子句中的连接顺序："><span class="toc-number">2.1.</span> <span class="toc-text">WHERE子句中的连接顺序：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sql写法"><span class="toc-number">3.</span> <span class="toc-text">sql写法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SELECT子句中避免使用’-’："><span class="toc-number">3.1.</span> <span class="toc-text">SELECT子句中避免使用’*’：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用TRUNCATE替代DELETE："><span class="toc-number">3.2.</span> <span class="toc-text">用TRUNCATE替代DELETE：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用Where子句替换HAVING子句："><span class="toc-number">3.3.</span> <span class="toc-text">用Where子句替换HAVING子句：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用表的别名-Alias-："><span class="toc-number">3.4.</span> <span class="toc-text">使用表的别名(Alias)：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用EXISTS替代IN、用NOT-EXISTS替代NOT-IN："><span class="toc-number">3.5.</span> <span class="toc-text">用EXISTS替代IN、用NOT EXISTS替代NOT IN：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用EXISTS替换DISTINCT："><span class="toc-number">3.6.</span> <span class="toc-text">用EXISTS替换DISTINCT：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL语句用大写的"><span class="toc-number">3.7.</span> <span class="toc-text">SQL语句用大写的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在Java代码中尽量少用连接符“＋”连接字符串。"><span class="toc-number">3.8.</span> <span class="toc-text">在Java代码中尽量少用连接符“＋”连接字符串。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#避免在索引列上使用NOT"><span class="toc-number">3.9.</span> <span class="toc-text">避免在索引列上使用NOT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#避免在索引列上使用计算。"><span class="toc-number">3.10.</span> <span class="toc-text">避免在索引列上使用计算。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用-gt-替代-gt-："><span class="toc-number">3.11.</span> <span class="toc-text">用&gt;=替代&gt;：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用UNION替换OR-适用于索引列-："><span class="toc-number">3.12.</span> <span class="toc-text">用UNION替换OR (适用于索引列)：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用IN来替换OR："><span class="toc-number">3.13.</span> <span class="toc-text">用IN来替换OR：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用UNION-ALL-替换UNION-如果有可能的话-："><span class="toc-number">3.14.</span> <span class="toc-text">用UNION-ALL 替换UNION ( 如果有可能的话)：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用WHERE替代ORDER-BY："><span class="toc-number">3.15.</span> <span class="toc-text">用WHERE替代ORDER BY：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#需要当心的WHERE子句"><span class="toc-number">3.16.</span> <span class="toc-text">需要当心的WHERE子句:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优化GROUP-BY："><span class="toc-number">3.17.</span> <span class="toc-text">优化GROUP BY：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sql索引相关"><span class="toc-number">4.</span> <span class="toc-text">sql索引相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#避免在索引列上使用IS-NULL和IS-NOT-NULL："><span class="toc-number">4.1.</span> <span class="toc-text">避免在索引列上使用IS NULL和IS NOT NULL：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总是使用索引的第一个列："><span class="toc-number">4.2.</span> <span class="toc-text">总是使用索引的第一个列：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#避免改变索引列的类型"><span class="toc-number">4.3.</span> <span class="toc-text">避免改变索引列的类型:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#索引效率降低"><span class="toc-number">4.4.</span> <span class="toc-text">索引效率降低</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#避免使用耗费资源的操作："><span class="toc-number">4.5.</span> <span class="toc-text">避免使用耗费资源的操作：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间有点久了，觉得很有用就一直留在身边，忘记了出处来源，感谢大佬们的奉献"><span class="toc-number">5.</span> <span class="toc-text">时间有点久了，觉得很有用就一直留在身边，忘记了出处来源，感谢大佬们的奉献</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -397,6 +400,7 @@ DEPT_TYPE NULL </code></pre>
   
 
   
+
 
 
           </div>
@@ -460,7 +464,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">搜索</a></li>
       
         
       
@@ -568,7 +572,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">生产代码，不做代码的搬运工</div>
   	  	
     	</section>
     
